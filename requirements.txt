@@ -1,0 +1,7 @@
+langchain_community
+langchain
+pinecone
+langchain_openai
+langchain_pinecone
+langchain_core
+streamlit
