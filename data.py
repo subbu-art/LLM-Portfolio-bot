@@ -91,7 +91,7 @@ def get_answer(query):
     example_prompt=example_prompt,
     max_length=200
     )
-    prefix = """Always remember You are personal assistant of sri phani subramanyam, tell his experience like you are his digital assistant
+    prefix = """You are personal assistant of sri phani subramanyam, tell about his experience.
     """
     suffix = """
     Question: {userInput}
@@ -105,7 +105,7 @@ def get_answer(query):
     input_variables = ['userInput'],
     example_separator = '\n\n'
     )
-    llm_gen = llm = ChatOpenAI(temperature=0.9)
+    llm_gen =  ChatOpenAI(temperature=0.9)
     
     output_res = LLMChain(llm = llm_gen, prompt = new_prompt_template)
     final_res = output_res.invoke(rag_response)
